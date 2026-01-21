@@ -20,7 +20,7 @@ inputs:
 
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/driftlint/driftlint:latest'
+  image: 'docker://ghcr.io/driftlint/driftlint-core:latest'
   args:
     - --spec
     - ${{ inputs.spec-path }}
