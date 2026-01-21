@@ -1,0 +1,28 @@
+name: 'DriftLinter'
+description: 'Detect API drift between your code and OpenAPI spec'
+author: 'driftlint'
+branding:
+  icon: 'search'
+  color: 'blue'
+
+inputs:
+  license-key:
+    description: 'DriftLinter License Key'
+    required: false
+  spec-path:
+    description: 'Path to OpenAPI spec (default: openapi.yaml)'
+    required: false
+    default: 'openapi.yaml'
+  app-file:
+    description: 'Path to your app file (default: app.py)'
+    required: false
+    default: 'app.py'
+
+runs:
+  using: 'docker'
+  image: 'docker://ghcr.io/driftlint/driftlint:latest'
+  args:
+    - --spec
+    - ${{ inputs.spec-path }}
+    - --app
+    - ${{ inputs.app-file }}
