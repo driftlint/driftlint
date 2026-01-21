@@ -7,7 +7,7 @@ This repository is a wrapper for the DriftLinter Docker image, allowing it to be
 ## Features
 
 - 🔍 **Drift Detection**: Identifies missing, undocumented, or mismatched endpoints.
-- 🤖 **AI-Powered Suggestions**: Automatically generates OpenAPI YAML for undocumented routes (requires OpenAI API Key).
+- 🤖 **AI-Powered Suggestions**: Automatically generates OpenAPI YAML for undocumented routes.
 - ⚡ **Zero Setup**: Runs via Docker, no need to install Python dependencies in your runner.
 
 ## Quick Start
@@ -37,7 +37,7 @@ jobs:
 
 | Input | Description | Default |
 |-------|-------------|---------|
-| `openai-api-key` | OpenAI API Key for AI suggestions. | N/A |
+| `openai-api-key` | OpenAI API Key for AI suggestions. | Optional |
 | `spec-path` | Path to your OpenAPI YAML file. | `openapi.yaml` |
 | `app-file` | Path to your Flask application entry point. | `app.py` |
 
