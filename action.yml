@@ -2,8 +2,8 @@ name: 'DriftLinter'
 description: 'AI-assisted API drift detection between your implementation and OpenAPI spec'
 author: 'driftlint'
 branding:
-  icon: 'search'
-  color: 'blue'
+  icon: 'shield'
+  color: 'green'
 
 inputs:
   config:
