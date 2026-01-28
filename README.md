@@ -28,18 +28,30 @@ jobs:
       - name: Run DriftLinter
         uses: driftlint/driftlint@v1
         with:
-          openai-api-key: ${{ secrets.OPENAI_API_KEY }} # Optional: For auto-suggestions
-          spec-path: 'docs/openapi.yaml'
-          app-file: 'app/main.py'
+          config: 'path/to/.driftlinter.yml'
+```
+
+Add the .driftlinter.yml file to your root directory
+```yaml
+# .driftlinter.yml
+version: 1
+projects:
+  - name: "Python Service"
+    source_dir: "src/api/flask"          # Where the code lives
+    spec_file: "src/api/flask/openapi.yaml"   # Where the spec lives
+    language: "python"                        # python, typescript, php
+
+  - name: "Payments Service"
+    source_dir: "services/payments/src"
+    spec_file: "shared/specs/payments-v1.yaml"
+    language: "typescript"
 ```
 
 ## Inputs
 
 | Input | Description | Default |
 |-------|-------------|---------|
-| `openai-api-key` | OpenAI API Key for AI suggestions. | Optional |
-| `spec-path` | Path to your OpenAPI YAML file. | `openapi.yaml` |
-| `app-file` | Path to your Flask application entry point. | `app.py` |
+| `config` | Path to your driftlinter yaml configuration. | `.driftlinter.yml` |
 
 ## How it Works
 
