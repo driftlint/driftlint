@@ -17,7 +17,7 @@ Add the `driftlinter` action to your workflow file (e.g., `.github/workflows/dri
 ```yaml
 name: API Drift Check
 
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   driftlint:
