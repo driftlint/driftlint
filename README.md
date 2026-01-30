@@ -5,7 +5,10 @@
 
 **DriftLinter** is a governance tool for modern engineering teams. It runs in your GitHub Actions pipeline to detect "API Drift"—the moment your code diverges from your documentation.
 
+**Demo Repository** https://github.com/driftlint/driftlint-demo/pull/2
+
 ---
+
 
 ## ⚡ The Problem
 You add a new route, change a parameter, or deprecate an endpoint in code, but you forget to update `openapi.yaml`.
