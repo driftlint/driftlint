@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./logo.png" alt="DriftLinter banner" width="100%">
+</p>
+
 # DriftLinter - GitHub Action
 
 > **Stop lying to your frontend team.**
